@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:claude.ai)",
+      "mcp__b41a199f-4c3e-4b58-988d-2e4abdf4f377__import-claude-design-from-url",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python -c \"import rembg; print\\('ok'\\)\")",
+      "Bash(pip install *)",
+      "Bash(python -c ' *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:ui-ux-pro-max-skill.nextlevelbuilder.io)",
+      "Bash(gh api *)",
+      "PowerShell($tmp = \"$env:TEMP\\\\uipro-install\"; New-Item -ItemType Directory -Force $tmp | Out-Null; Set-Location $tmp; uipro init --ai claude 2>&1)",
+      "WebFetch(domain:www.skills.sh)",
+      "WebFetch(domain:higgsfield.ai)",
+      "Skill(update-config)",
+      "Skill(update-config:*)"
+    ]
+  }
+}

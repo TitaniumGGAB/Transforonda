@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TRANSFORONDA | Transportes de confianza en Marina Alta</title>
+  <meta name="description" content="Transportes profesionales en Marina Alta. Grúa, contenedores y cubas de agua. 20 años de experiencia. Presupuesto gratis."/>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet"/>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { font-family: 'Inter', sans-serif; background: #fff; color: #1a1a1a; }
+    body { overflow-x: hidden; }
+    
+    /* Animaciones globales */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    /* Utilidades */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-padding { padding: 80px 0; }
+    @media (max-width: 768px) { .section-padding { padding: 60px 0; } }
+    
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.7);
+      border-bottom: 1px solid rgba(166, 7, 30, 0.1);
+      padding: 16px 0;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #a6071e;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #a6071e 0%, #d41e3c 100%);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .nav-links {
+      display: none;
+      gap: 32px;
+      list-style: none;
+    }
+    @media (min-width: 768px) {
+      .nav-links { display: flex; }
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #a6071e;
+    }
+    .nav-cta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .nav-phone {
+      display: none;
+      color: #a6071e;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    @media (min-width: 768px) {
+      .nav-phone { display: block; }
+    }
+    
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f8f7f5 0%, #fff 50%, #faf9f7 100%);
+      position: relative;
+      overflow: hidden;
+      margin-top: 60px;
+      padding: 40px 24px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(166, 7, 30, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(166, 7, 30, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-content {
+      max-width: 800px;
+      z-index: 10;
+      text-align: center;
+      animation: fadeInUp 0.8s ease-out;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      background: rgba(166, 7, 30, 0.1);
+      border: 1px solid rgba(166, 7, 30, 0.3);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #a6071e;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; }
+    }
+    .hero-subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .hero-subtitle { font-size: 16px; }
+    }
+    
+    /* Botones */
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+    .btn-primary {
+      background: #a6071e;
+      color: white;
+      box-shadow: 0 4px 15px rgba(166, 7, 30, 0.3);
+    }
+    .btn-primary:hover {
+      background: #8a061a;
+      box-shadow: 0 6px 20px rgba(166, 7, 30, 0.4);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: white;
+      color: #a6071e;
+      border: 2px solid #a6071e;
+    }
+    .btn-secondary:hover {
+      background: #a6071e;
+      color: white;
+    }
+    .btn-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+      .btn { padding: 12px 24px; font-size: 14px; }
+      .btn-group { gap: 12px; }
+    }
+    
+    /* Servicios */
+    .services {
+      background: #fff;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a6071e;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 60px;
+      line-height: 1.2;
+      color: #1a1a1a;
+    }
+    @media (max-width: 768px) {
+      .section-title { font-size: 32px; margin-bottom: 40px; }
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .service-card {
+      padding: 40px 32px;
+      background: #f8f7f5;
+      border-radius: 12px;
+      border-left: 4px solid #a6071e;
+      transition: all 0.3s;
+      animation: fadeInUp 0.6s ease-out;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(166, 7, 30, 0.12);
+    }
+    .service-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+    .service-card p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    
+    /* Por qué elegirnos */
+    .why-us {
+      background: linear-gradient(135deg, rgba(166, 7, 30, 0.04) 0%, rgba(166, 7, 30, 0.02) 100%);
+      border-top: 1px solid rgba(166, 7, 30, 0.1);
+      border-bottom: 1px solid rgba(166, 7, 30, 0.1);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+    }
+    .why-item {
+      text-align: center;
+      animation: fadeInUp 0.6s ease-out;
+    }
+    .why-item h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #a6071e;
+    }
+    .why-item p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    
+    /* Testimonios */
+    .testimonials {
+      background: #fff;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+    .testimonial-card {
+      padding: 32px;
+      background: #f8f7f5;
+      border-radius: 12px;
+      border-top: 3px solid #a6071e;
+      animation: fadeInUp 0.6s ease-out;
+    }
+    .stars {
+      color: #a6071e;
+      font-size: 14px;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+    .testimonial-text {
+      color: #333;
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      font-weight: 600;
+      color: #1a1a1a;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .testimonial-role {
+      color: #999;
+      font-size: 12px;
+    }
+    
+    /* Ubicación y cobertura */
+    .coverage {
+      background: linear-gradient(135deg, rgba(166, 7, 30, 0.06) 0%, rgba(166, 7, 30, 0.03) 100%);
+    }
+    .coverage-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .coverage-content { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .coverage-text h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: #1a1a1a;
+    }
+    .coverage-list {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+    .coverage-list li {
+      padding: 12px 0;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+    }
+    .coverage-list li::before {
+      content: '✓';
+      color: #a6071e;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .coverage-map {
+      background: #f0f0f0;
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      color: #999;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    
+    /* CTA final */
+    .final-cta {
+      background: linear-gradient(135deg, #a6071e 0%, #d41e3c 100%);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .final-cta-content {
+      z-index: 10;
+      position: relative;
+      animation: fadeInUp 0.8s ease-out;
+    }
+    .final-cta h2 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    @media (max-width: 768px) {
+      .final-cta h2 { font-size: 32px; }
+    }
+    .final-cta p {
+      font-size: 18px;
+      margin-bottom: 32px;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .final-cta p { font-size: 16px; }
+    }
+    .final-cta .btn {
+      font-size: 16px;
+      padding: 16px 32px;
+    }
+    .final-cta .btn-white {
+      background: white;
+      color: #a6071e;
+      font-weight: 700;
+    }
+    .final-cta .btn-white:hover {
+      background: #f8f7f5;
+      transform: translateY(-2px);
+    }
+    
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 48px 24px;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-col h3 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col ul li {
+      margin-bottom: 12px;
+    }
+    .footer-col a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+    .footer-col a:hover {
+      color: #a6071e;
+    }
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 40px 0;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 12px;
+      color: #999;
+    }
+    @media (max-width: 768px) {
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    
+    /* Mobile CTA flotante */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: white;
+      border-top: 1px solid #eee;
+      padding: 12px 24px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+    @media (max-width: 768px) {
+      .mobile-cta { display: flex; }
+    }
+    .mobile-cta-buttons {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+    .mobile-cta-buttons a {
+      flex: 1;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .mobile-cta-call {
+      background: #a6071e;
+      color: white;
+    }
+    .mobile-cta-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    
+    /* Ajuste para mobile con CTA flotante */
+    @media (max-width: 768px) {
+      body { padding-bottom: 60px; }
+    }
+  </style>
+</helmet>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-container">
+    <a href="#" class="logo">
+      <div class="logo-icon">T</div>
+      <span>TRANSFORONDA</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#cobertura">Cobertura</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:645070464" class="nav-phone">📱 645 070 464</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">✨ 20 años de experiencia</div>
+    <h1>Tu carga en movimiento. Tu confianza en crecimiento.</h1>
+    <p class="hero-subtitle">Transportes profesionales en Marina Alta. Rápido, confiable y familiar. Presupuesto gratis, sin compromisos.</p>
+    <div class="btn-group">
+      <a href="tel:645070464" class="btn btn-primary">📱 Llamar ahora</a>
+      <a href="https://wa.me/34645070464?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto" target="_blank" class="btn btn-secondary">💬 WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section class="services section-padding">
+  <div class="container">
+    <div class="section-label">SERVICIOS</div>
+    <h2 class="section-title">Lo que hacemos</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🚚</div>
+        <h3>Transporte de Materiales</h3>
+        <p>Transporte especializado de materiales de construcción. Servicio rápido y seguro hacia todos los puntos de Marina Alta.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <h3>Servicio de Grúa</h3>
+        <p>Carga y descarga con grúa incluida. Manejamos desde cargas ligeras hasta pesadas. Personal especializado en cada trabajo.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">♻️</div>
+        <h3>Contenedores de Escombro</h3>
+        <p>Contenedores de diferentes tamaños para escombros y residuos. Recogida, transporte y gestión responsable.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌱</div>
+        <h3>Contenedores de Jardín</h3>
+        <p>Recogida y transporte de restos de poda, tierra y materiales de jardinería. Totalmente profesional.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💧</div>
+        <h3>Cubas de Agua</h3>
+        <p>Servicio especializado de transporte de cubas de agua para piscinas. Instalación y retirada incluidas.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>Transporte Flexible</h3>
+        <p>Cualquier necesidad de transporte. Adaptamos nuestro servicio a lo que necesites. Cotiza sin compromiso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Por qué elegirnos -->
+<section class="why-us section-padding">
+  <div class="container">
+    <div class="section-label">DIFERENCIADORES</div>
+    <h2 class="section-title">Por qué confiar en TRANSFORONDA</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>⚡ Rapidez</h3>
+        <p>Respuesta inmediata a tus necesidades. Trabajamos sin perder tiempo.</p>
+      </div>
+      <div class="why-item">
+        <h3>💰 Mejor Precio</h3>
+        <p>20 años nos dan eficiencia. Ofrecemos los mejores precios del mercado sin sacrificar calidad.</p>
+      </div>
+      <div class="why-item">
+        <h3>🤝 Compromiso</h3>
+        <p>Tu satisfacción es nuestro objetivo. Somos una empresa familiar que se preocupa por sus clientes.</p>
+      </div>
+      <div class="why-item">
+        <h3>🏆 Profesionales</h3>
+        <p>Operadores de transporte y conductores profesionales certificados y con experiencia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="testimonials section-padding">
+  <div class="container">
+    <div class="section-label">OPINIONES</div>
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Transforonda es rápido, confiable y profesional. Llevamos trabajando con ellos 5 años. Siempre responden al teléfono y cumplen cuando prometen."</p>
+        <div class="testimonial-author">Juan García</div>
+        <div class="testimonial-role">Almacén de Construcción</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Mejores precios que la competencia y mucho más cercanos. Recomendamos TRANSFORONDA a todos nuestros clientes."</p>
+        <div class="testimonial-author">María López</div>
+        <div class="testimonial-role">Empresa de Jardinería</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Profesionales desde el primer contacto. Ellos solucionan cualquier problema. Confío en TRANSFORONDA para mis obras."</p>
+        <div class="testimonial-author">Carlos Martínez</div>
+        <div class="testimonial-role">Constructor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cobertura -->
+<section class="coverage section-padding" id="cobertura">
+  <div class="container">
+    <div class="coverage-content">
+      <div class="coverage-text">
+        <div class="section-label">COBERTURA</div>
+        <h2>Servicio en toda Marina Alta</h2>
+        <ul class="coverage-list">
+          <li>Teulada</li>
+          <li>Moraira</li>
+          <li>Calpe</li>
+          <li>Benissa</li>
+          <li>Xàbia</li>
+          <li>Jálon</li>
+          <li>Y toda la comarca de Marina Alta</li>
+        </ul>
+        <p style="color: #666; font-size: 14px; line-height: 1.6;">Trabajamos con almacenes de construcción, empresas de jardinería y particulares. Tu zona, nuestro servicio.</p>
+      </div>
+      <div class="coverage-map">
+        <div>
+          <div style="font-size: 48px; margin-bottom: 12px;">🗺️</div>
+          <p>Marina Alta, Alicante</p>
+          <p style="font-size: 12px; margin-top: 8px; opacity: 0.7;">20 años cubriendo la zona</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Final -->
+<section class="final-cta section-padding" id="contacto">
+  <div class="container">
+    <div class="final-cta-content">
+      <h2>¿Necesitas presupuesto?</h2>
+      <p>Contacta con nosotros. Respuesta rápida, sin compromisos, sin sorpresas.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="tel:645070464" class="btn btn-white">📱 645 070 464</a>
+        <a href="https://wa.me/34645070464?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto" target="_blank" class="btn btn-white" style="background: white; border: 2px solid white;">💬 WhatsApp</a>
+      </div>
+      <p style="margin-top: 24px; font-size: 13px; opacity: 0.85;">Email: logisticatransforonda@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#cobertura">Zona de Cobertura</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="tel:645070464">📱 645 070 464</a></li>
+          <li><a href="mailto:logisticatransforonda@gmail.com">📧 logisticatransforonda@gmail.com</a></li>
+          <li><a href="https://wa.me/34645070464" target="_blank">💬 WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Horarios</h3>
+        <ul>
+          <li><a>Lunes a Viernes: 7:00 - 18:00</a></li>
+          <li><a>Sábado: 8:00 - 14:00</a></li>
+          <li><a>Domingo: Cerrado</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#privacy">Política de Privacidad</a></li>
+          <li><a href="#terms">Aviso Legal</a></li>
+          <li><a href="#cookies">Política de Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TRANSFORONDA. Todos los derechos reservados.</p>
+      <p>Marina Alta, Alicante | 20 años de confianza</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile CTA flotante -->
+<div class="mobile-cta">
+  <div class="mobile-cta-buttons">
+    <a href="tel:645070464" class="mobile-cta-call">📱 LLAMAR</a>
+    <a href="https://wa.me/34645070464?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto" target="_blank" class="mobile-cta-whatsapp">💬 WHATSAPP</a>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100vh&quot;}}"></script>
+</body>
+</html>
