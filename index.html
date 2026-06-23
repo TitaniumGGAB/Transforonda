@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Transportes en Marina Alta | TRANSFORONDA – Grúa, Contenedores y Cubas de Agua</title>
+  <title>Transportes en la Marina Alta | TRANSFORONDA – Grúa, Contenedores y Cubas de Agua</title>
   <meta name="description"
-    content="Transporte de materiales, grúa, contenedores de escombro y cubas de agua en toda la Marina Alta. 20 años de experiencia. Presupuesto gratis sin compromiso. Llama o escribe por WhatsApp." />
+    content="Transporte de materiales, grúa, contenedores de escombro y cubas de agua en toda la Marina Alta. 20 años de experiencia. Llámanos o escríbenos por WhatsApp y te atendemos al momento." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
@@ -490,6 +490,32 @@
     .btn-secondary:hover {
       background: #a6071e;
       color: white;
+    }
+
+    .wa-icon-wrap {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+    }
+
+    .wa-icon-wrap .btn-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .wa-icon-hover {
+      opacity: 0;
+    }
+
+    .btn-secondary:hover .wa-icon-default {
+      opacity: 0;
+    }
+
+    .btn-secondary:hover .wa-icon-hover {
+      opacity: 1;
     }
 
     .btn-group {
@@ -1075,7 +1101,7 @@
   <nav>
     <div class="nav-container">
       <a href="#" class="logo">
-        <img src="assets/transforonda-contenedor.svg" alt="Transforonda - Transportes Marina Alta" />
+        <img src="assets/transforonda-contenedor.svg" alt="Transforonda - Transportes en la Marina Alta" />
       </a>
       <ul class="nav-links">
         <li><a href="#servicios">Servicios</a></li>
@@ -1099,12 +1125,12 @@
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-visual">
-        <img src="assets/images/camion-hero2.png" alt="Camión grúa TRANSFORONDA cargando palet de material" />
+        <img src="assets/images/camion-hero.png" alt="Camión grúa TRANSFORONDA cargando palet de material" />
       </div>
       <div class="hero-content">
         <h1>Tu carga en movimiento, tu confianza en crecimiento</h1>
-        <p class="hero-subtitle">Transportes profesionales en Marina Alta.<br />Rápido y confiable. Presupuesto gratis y
-          sin compromisos.</p>
+        <p class="hero-subtitle">Transportes profesionales en la Marina Alta.<br />Rápido y confiable. Llámanos y te
+          atendemos al momento.</p>
         <p class="hero-experience">20 años de experiencia en la comarca</p>
         <div class="btn-group">
           <a href="tel:625386644" class="btn btn-primary">
@@ -1115,9 +1141,12 @@
             </svg>
             Llamar ahora
           </a>
-          <a href="https://wa.me/34625386644?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto"
+          <a href="https://wa.me/34625386644?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n"
             target="_blank" class="btn btn-secondary">
-            <img class="btn-icon" src="assets/whatsapp-color-corporativo.png" alt="" />
+            <span class="wa-icon-wrap">
+              <img class="btn-icon wa-icon-default" src="assets/whatsapp-color-corporativo.png" alt="" />
+              <img class="btn-icon wa-icon-hover" src="assets/whatsapp-blanco.png" alt="" />
+            </span>
             WhatsApp
           </a>
         </div>
@@ -1133,7 +1162,7 @@
       <div class="services-layout">
         <div class="services-visual sr sr-left">
           <div class="services-visual-inner">
-            <img src="assets/images/camion-hero2.png" alt="Camión grúa TRANSFORONDA en acción" />
+            <img src="assets/images/camion-hero.png" alt="Camión grúa TRANSFORONDA en acción" />
             <div class="services-visual-caption">
               <div class="vc-label">En acción</div>
               <div class="vc-name" id="vcName">Transporte de Materiales</div>
@@ -1146,7 +1175,7 @@
             <div class="service-body">
               <h3>Transporte de Materiales</h3>
               <p>Transporte especializado de materiales de construcción. Servicio rápido y seguro hacia todos los puntos
-                de Marina Alta.</p>
+                de la Marina Alta.</p>
             </div>
           </div>
           <div class="service-card sr sr-right sr-delay-1" data-service="Servicio de Grúa">
@@ -1184,8 +1213,8 @@
             <div class="service-icon">📦</div>
             <div class="service-body">
               <h3>Transporte Flexible</h3>
-              <p>Cualquier necesidad de transporte. Adaptamos nuestro servicio a lo que necesites. Cotiza sin
-                compromiso.</p>
+              <p>Cualquier necesidad de transporte. Adaptamos nuestro servicio a lo que necesites. Llámanos y lo
+                hablamos.</p>
             </div>
           </div>
         </div>
@@ -1288,14 +1317,14 @@
       <div class="coverage-content">
         <div class="coverage-text sr sr-left">
           <div class="section-label">COBERTURA</div>
-          <h2>Servicio en toda Marina Alta</h2>
+          <h2>Servicio en toda la Marina Alta</h2>
           <p>Damos servicio en Dénia, Xàbia, Calpe, Benissa, Teulada, Moraira, Xaló (Jalón) y el resto de la Marina
             Alta, incluyendo Ondara, Pedreguer y Gata de Gorgos. Con 20 años en la zona, conocemos cada rincón y
             contamos con la confianza de almacenes de construcción, empresas de jardinería y particulares de toda la
             comarca.</p>
         </div>
         <div class="coverage-map sr sr-right">
-          <img src="assets/images/mapa-marina-alta.png" alt="Marina Alta, Alicante - Zona de cobertura TRANSFORONDA" />
+          <img src="assets/images/mapa-marina-alta.png" alt="La Marina Alta, Alicante - Zona de cobertura TRANSFORONDA" />
         </div>
       </div>
     </div>
@@ -1305,8 +1334,8 @@
   <section class="final-cta section-padding" id="contacto">
     <div class="container">
       <div class="final-cta-content">
-        <h2>¿Necesitas presupuesto?</h2>
-        <p>Contacta con nosotros. Respuesta rápida, sin compromisos, sin sorpresas.</p>
+        <h2>¿Necesitas un transporte?</h2>
+        <p>Llámanos y te atendemos al momento. Respuesta rápida y sin sorpresas.</p>
         <div class="btn-group" style="justify-content: center;">
           <a href="tel:625386644" class="btn btn-white">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1316,7 +1345,7 @@
             </svg>
             625 386 644
           </a>
-          <a href="https://wa.me/34625386644?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto"
+          <a href="https://wa.me/34625386644?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n"
             target="_blank" class="btn btn-white">
             <img class="btn-icon" src="assets/whatsapp-color-corporativo.png" alt="" />
             WhatsApp
@@ -1374,7 +1403,7 @@
       <div class="footer-divider"></div>
       <div class="footer-bottom">
         <p>&copy; 2026 TRANSFORONDA. Todos los derechos reservados.</p>
-        <p>Marina Alta, Alicante | 20 años de confianza</p>
+        <p>La Marina Alta, Alicante | 20 años de confianza</p>
       </div>
     </div>
   </footer>
@@ -1390,7 +1419,7 @@
         </svg>
         LLAMAR
       </a>
-      <a href="https://wa.me/34625386644?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto"
+      <a href="https://wa.me/34625386644?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n"
         target="_blank" class="mobile-cta-whatsapp">
         <img class="mobile-cta-icon" src="assets/whatsapp-blanco.png" alt="" />
         WHATSAPP
