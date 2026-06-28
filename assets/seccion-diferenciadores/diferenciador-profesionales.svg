@@ -1,9 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256">
   <defs>
     <linearGradient id="grRed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cf2138"/><stop offset="1" stop-color="#7d0517"/></linearGradient>
-    <filter id="ds" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="1.3" stdDeviation="1.1" flood-color="#5a0411" flood-opacity="0.3"/></filter>
   </defs>
-  <g filter="url(#ds)">
+  <g>
     <path d="M23 30 L18 54 L26 49 L30 56 L34 34 Z" fill="#7d0517"/>
     <path d="M41 30 L46 54 L38 49 L34 56 L30 34 Z" fill="#5a0411"/>
     <circle cx="32" cy="26" r="17" fill="url(#grRed)"/>

@@ -1,0 +1,40 @@
+# ==========================================================
+#  TRANSFORONDA - .htaccess (Hostinger / LiteSpeed)
+#  Cabeceras de seguridad + HTTPS + cache de assets.
+#  Bajo mantenimiento: solo toca la CSP si embebes algo nuevo.
+# ==========================================================
+
+# --- Cabeceras de seguridad ---
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+  # CSP pragmatica: self + Google Fonts. Cuando elijas la analitica sin
+  # cookies, ya incluye el dominio de Umami (https://cloud.umami.is).
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://cloud.umami.is; connect-src 'self' https://cloud.umami.is"
+</IfModule>
+
+# --- Forzar HTTPS (seguro tras proxy de Hostinger; evita bucles) ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# --- No listar directorios ---
+Options -Indexes
+
+# --- Cache de assets estaticos (no cachea el HTML) ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

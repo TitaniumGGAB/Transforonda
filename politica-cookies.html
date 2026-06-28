@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Cookies | TRANSFORONDA</title>
+  <meta name="description" content="Política de cookies de TRANSFORONDA. Información sobre el uso de cookies en el sitio de TRANSFORONDA. Utilizamos analítica sin cookies, conforme a la LSSI-CE y el RGPD." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="assets/Branding/favicon.svg" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #a6071e;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .legal-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid rgba(166, 7, 30, 0.12);
+      padding: 12px 0;
+    }
+
+    .legal-header-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .legal-logo img {
+      height: 46px;
+      width: auto;
+      display: block;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #a6071e;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 16px;
+      border: 2px solid #a6071e;
+      border-radius: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .back-link:hover {
+      background: #a6071e;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .back-link svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      .back-link span {
+        display: none;
+      }
+
+      .back-link {
+        padding: 8px 12px;
+      }
+    }
+
+    .legal-hero {
+      background: linear-gradient(135deg, rgba(166, 7, 30, 0.06) 0%, rgba(166, 7, 30, 0.02) 100%);
+      border-bottom: 1px solid rgba(166, 7, 30, 0.1);
+      padding: 56px 24px 44px;
+    }
+
+    .legal-hero-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .legal-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a6071e;
+      margin-bottom: 12px;
+    }
+
+    .legal-hero h1 {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #1a1a1a;
+    }
+
+    .legal-updated {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .legal-hero {
+        padding: 40px 20px 32px;
+      }
+
+      .legal-hero h1 {
+        font-size: 28px;
+      }
+    }
+
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(166, 7, 30, 0.15);
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #a6071e;
+      margin: 24px 0 10px;
+    }
+
+    p {
+      color: #444;
+      font-size: 15.5px;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      margin: 0 0 16px 22px;
+      color: #444;
+      font-size: 15.5px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 8px 0 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(166, 7, 30, 0.12);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      min-width: 620px;
+    }
+
+    th {
+      background: #a6071e;
+      color: #fff;
+      text-align: left;
+      font-weight: 600;
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+
+    td {
+      padding: 12px 16px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      color: #444;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #faf9f7;
+    }
+
+    .ph {
+      display: inline-block;
+      background: #fff3cd;
+      color: #7d0517;
+      border: 1px dashed #a6071e;
+      border-radius: 5px;
+      padding: 1px 8px;
+      font-weight: 700;
+      font-size: 0.92em;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    .ph-note {
+      background: #fff8e6;
+      border: 1px solid #ffe08a;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      font-size: 14px;
+      color: #7d4e00;
+    }
+
+    .ph-note strong {
+      color: #7d4e00;
+    }
+
+    .info-box {
+      background: #f8f7f5;
+      border-left: 4px solid #a6071e;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 16px 0;
+    }
+
+    .info-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 40px 24px;
+    }
+
+    .footer-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 28px;
+      margin-bottom: 24px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      font-size: 14px;
+      transition: color 0.25s;
+    }
+
+    .footer-links a:hover {
+      color: #a6071e;
+      text-decoration: none;
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 24px 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="legal-header">
+    <div class="legal-header-inner">
+      <a href="index.html" class="legal-logo" aria-label="TRANSFORONDA - Inicio">
+        <img src="assets/Branding/transforonda-contenedor.svg" alt="TRANSFORONDA - Transportes en la Marina Alta" />
+      </a>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Volver al inicio</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="legal-hero">
+    <div class="legal-hero-inner">
+      <div class="legal-label">Cookies</div>
+      <h1>Política de Cookies</h1>
+      <p class="legal-updated">Última actualización: junio de 2026</p>
+    </div>
+  </div>
+
+  <main>
+
+    <section>
+      <h2>1. ¿Qué son las cookies?</h2>
+      <p>Una cookie es un pequeño archivo de texto que un sitio web almacena en el navegador o dispositivo del usuario
+        (ordenador, tableta o teléfono móvil) cuando lo visita. Las cookies permiten, entre otras cosas, recordar
+        información sobre la visita, así como obtener información estadística sobre el uso del sitio web.</p>
+      <p>El uso de cookies en España está regulado por el artículo 22.2 de la Ley 34/2002, de Servicios de la Sociedad de
+        la Información y de Comercio Electrónico (LSSI-CE), y por el Reglamento (UE) 2016/679 (RGPD) en lo relativo al
+        tratamiento de datos personales.</p>
+    </section>
+
+    <section>
+      <h2>2. ¿Qué cookies utiliza este sitio web?</h2>
+      <p>El sitio web de TRANSFORONDA es un sitio principalmente informativo. Las cookies que puede utilizar se clasifican
+        en los siguientes tipos:</p>
+
+      <h3>2.1. Cookies técnicas o necesarias</h3>
+      <p>Son aquellas imprescindibles para el correcto funcionamiento del sitio web y la prestación de los servicios
+        solicitados (por ejemplo, gestionar la navegación o recordar tus preferencias respecto a las cookies). Estas
+        cookies <strong>están exentas de consentimiento</strong> conforme al artículo 22.2 de la LSSI-CE, por lo que se
+        instalan automáticamente.</p>
+
+      <h3>2.2. Cookies de analítica</h3>
+      <p>Para medir de forma estadística el uso del sitio (número de visitas, páginas más vistas, tipo de dispositivo, etc.) utilizamos <strong>Umami</strong>, una herramienta de analítica web <strong>sin cookies</strong> y centrada en la privacidad. Umami <strong>no instala cookies</strong> ni almacena información en tu dispositivo, y solo recopila datos <strong>agregados y anónimos</strong> que no permiten identificarte ni rastrearte entre sitios web.</p>
+      <div class="info-box">
+        <p><strong>En resumen:</strong> este sitio <strong>no utiliza cookies de analítica ni publicitarias</strong>. Por eso no verás un banner de cookies: no hay nada que consentir.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Consentimiento</h2>
+      <p>Dado que este sitio web <strong>no utiliza cookies que requieran consentimiento</strong> (a lo sumo, cookies estrictamente técnicas exentas conforme al artículo 22.2 de la LSSI-CE), <strong>no se muestra un banner de cookies</strong> y no es necesaria ninguna acción por tu parte.</p>
+    </section>
+
+    <section>
+      <h2>4. ¿Cómo gestionar las cookies en tu navegador?</h2>
+      <p>Aunque este sitio no instala cookies no esenciales, puedes controlar, bloquear o eliminar en cualquier momento las cookies de tu navegador a través de su configuración. Aquí tienes las instrucciones de los navegadores más comunes:</p>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+        <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+        <li><a href="https://support.microsoft.com/es-es/microsoft-edge" target="_blank" rel="noopener">Microsoft Edge</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Tratamiento de datos personales</h2>
+      <p>La analítica web que utilizamos (Umami) trata únicamente datos agregados y anónimos sin cookies. En la medida en que algún dato pudiera considerarse personal, su tratamiento se rige por nuestra <a href="politica-privacidad.html">Política de Privacidad</a>. El responsable del tratamiento
+        es <span>Reyes Foronda Cocera</span>. Para cualquier cuestión relacionada con las cookies o la protección
+        de tus datos, puedes escribirnos a <span>logisticatransforonda@gmail.com</span> o llamarnos al 625 386 644.</p>
+    </section>
+
+    <section>
+      <h2>6. Cambios en la política de cookies</h2>
+      <p>TRANSFORONDA puede modificar esta Política de Cookies en función de nuevas exigencias legislativas o
+        reglamentarias, o con la finalidad de adaptar dicha política a las instrucciones de la Agencia Española de
+        Protección de Datos. Por ello, recomendamos revisarla cada vez que accedas al sitio web para estar adecuadamente
+        informado.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="aviso-legal.html">Aviso Legal</a>
+        <a href="politica-privacidad.html">Política de Privacidad</a>
+        <a href="politica-cookies.html">Política de Cookies</a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TRANSFORONDA. Todos los derechos reservados.</p>
+        <p>La Marina Alta, Alicante | 20 años de confianza</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

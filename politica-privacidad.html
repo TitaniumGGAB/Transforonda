@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad | TRANSFORONDA</title>
+  <meta name="description" content="Política de privacidad de TRANSFORONDA conforme al RGPD y la LOPDGDD. Tratamiento de datos por contacto telefónico, WhatsApp y analítica web." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="assets/Branding/favicon.svg" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #a6071e;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .legal-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid rgba(166, 7, 30, 0.12);
+      padding: 12px 0;
+    }
+
+    .legal-header-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .legal-logo img {
+      height: 46px;
+      width: auto;
+      display: block;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #a6071e;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 16px;
+      border: 2px solid #a6071e;
+      border-radius: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .back-link:hover {
+      background: #a6071e;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .back-link svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      .back-link span {
+        display: none;
+      }
+
+      .back-link {
+        padding: 8px 12px;
+      }
+    }
+
+    .legal-hero {
+      background: linear-gradient(135deg, rgba(166, 7, 30, 0.06) 0%, rgba(166, 7, 30, 0.02) 100%);
+      border-bottom: 1px solid rgba(166, 7, 30, 0.1);
+      padding: 56px 24px 44px;
+    }
+
+    .legal-hero-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .legal-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a6071e;
+      margin-bottom: 12px;
+    }
+
+    .legal-hero h1 {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #1a1a1a;
+    }
+
+    .legal-updated {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .legal-hero {
+        padding: 40px 20px 32px;
+      }
+
+      .legal-hero h1 {
+        font-size: 28px;
+      }
+    }
+
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(166, 7, 30, 0.15);
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #a6071e;
+      margin: 24px 0 10px;
+    }
+
+    p {
+      color: #444;
+      font-size: 15.5px;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      margin: 0 0 16px 22px;
+      color: #444;
+      font-size: 15.5px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    .titular-card {
+      background: #f8f7f5;
+      border-left: 4px solid #a6071e;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 4px 0 8px;
+    }
+
+    .titular-card dl {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 10px 20px;
+    }
+
+    .titular-card dt {
+      font-weight: 600;
+      color: #1a1a1a;
+      font-size: 15px;
+    }
+
+    .titular-card dd {
+      color: #444;
+      font-size: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .titular-card dl {
+        grid-template-columns: 1fr;
+        gap: 2px 0;
+      }
+
+      .titular-card dt {
+        margin-top: 12px;
+      }
+
+      .titular-card dt:first-child {
+        margin-top: 0;
+      }
+    }
+
+    /* Tabla de tratamientos */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 8px 0 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(166, 7, 30, 0.12);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      min-width: 560px;
+    }
+
+    th {
+      background: #a6071e;
+      color: #fff;
+      text-align: left;
+      font-weight: 600;
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+
+    td {
+      padding: 12px 16px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      color: #444;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #faf9f7;
+    }
+
+    .ph {
+      display: inline-block;
+      background: #fff3cd;
+      color: #7d0517;
+      border: 1px dashed #a6071e;
+      border-radius: 5px;
+      padding: 1px 8px;
+      font-weight: 700;
+      font-size: 0.92em;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    .ph-note {
+      background: #fff8e6;
+      border: 1px solid #ffe08a;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      font-size: 14px;
+      color: #7d4e00;
+    }
+
+    .ph-note strong {
+      color: #7d4e00;
+    }
+
+    .highlight-box {
+      background: #f8f7f5;
+      border-left: 4px solid #a6071e;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 16px 0;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 40px 24px;
+    }
+
+    .footer-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 28px;
+      margin-bottom: 24px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      font-size: 14px;
+      transition: color 0.25s;
+    }
+
+    .footer-links a:hover {
+      color: #a6071e;
+      text-decoration: none;
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 24px 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="legal-header">
+    <div class="legal-header-inner">
+      <a href="index.html" class="legal-logo" aria-label="TRANSFORONDA - Inicio">
+        <img src="assets/Branding/transforonda-contenedor.svg" alt="TRANSFORONDA - Transportes en la Marina Alta" />
+      </a>
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Volver al inicio</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="legal-hero">
+    <div class="legal-hero-inner">
+      <div class="legal-label">Protección de datos</div>
+      <h1>Política de Privacidad</h1>
+      <p class="legal-updated">Última actualización: junio de 2026</p>
+    </div>
+  </div>
+
+  <main>
+
+    <section>
+      <h2>1. Responsable del tratamiento</h2>
+      <p>De conformidad con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD) y la Ley Orgánica
+        3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), se
+        informa de que el responsable del tratamiento de los datos personales recabados a través de este sitio web y de
+        nuestros canales de contacto es:</p>
+      <div class="titular-card">
+        <dl>
+          <dt>Responsable</dt>
+          <dd><span>Reyes Foronda Cocera</span></dd>
+          <dt>NIF / CIF</dt>
+          <dd><span>75100487J</span></dd>
+          <dt>Domicilio</dt>
+          <dd><span>Avenida del Mediterráneo nº 40, 3.º C, 03725 Teulada (Alicante)</span></dd>
+          <dt>Teléfono</dt>
+          <dd>625 386 644</dd>
+          <dt>Correo electrónico</dt>
+          <dd><span>logisticatransforonda@gmail.com</span></dd>
+          <dt>Nombre comercial</dt>
+          <dd>TRANSFORONDA</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. ¿Qué datos tratamos y con qué finalidad?</h2>
+      <p>TRANSFORONDA es una empresa familiar de transporte. No disponemos de un formulario de registro en la web; los
+        datos personales que tratamos son los que tú nos facilitas voluntariamente cuando contactas con nosotros para
+        solicitar información o un servicio de transporte. A continuación se detallan las distintas actividades de
+        tratamiento:</p>
+
+      <h3>2.1. Contacto por teléfono y por WhatsApp</h3>
+      <p>Cuando nos llamas al 625 386 644 o nos escribes a través de WhatsApp, tratamos los datos que nos proporciones en
+        esa comunicación, normalmente: tu número de teléfono, tu nombre, la dirección o ubicación del servicio y los
+        detalles del transporte que necesitas. Estos datos se utilizan para atender tu solicitud, organizar el servicio y
+        mantener el contacto durante la prestación.</p>
+      <div class="highlight-box">
+        <p style="margin-bottom:0"><strong>Importante sobre WhatsApp:</strong> WhatsApp es un servicio prestado por
+          <strong>WhatsApp Ireland Limited</strong> (grupo Meta). Al comunicarte con nosotros por este medio, tus datos
+          también se rigen por las condiciones y la política de privacidad de WhatsApp, sobre las que TRANSFORONDA no
+          tiene control. Meta puede tratar metadatos de la comunicación y, en su caso, realizar transferencias
+          internacionales de datos. Si prefieres no utilizar WhatsApp, puedes contactarnos por teléfono o correo
+          electrónico.</p>
+      </div>
+
+      <h3>2.2. Contacto por correo electrónico</h3>
+      <p>Si nos escribes a nuestro correo electrónico, trataremos tu dirección de email y cualquier dato que incluyas en
+        el mensaje, con la finalidad de responder a tu consulta y, si procede, gestionar el servicio solicitado.</p>
+
+      <h3>2.3. Gestión de clientes y facturación</h3>
+      <p>Si finalmente contratas un servicio, trataremos los datos necesarios para la prestación, facturación y
+        cumplimiento de nuestras obligaciones contables, fiscales y administrativas.</p>
+
+      <h3>2.4. Analítica web sin cookies</h3>
+      <p>Para conocer cómo se utiliza nuestro sitio web y mejorarlo, utilizamos <strong>Umami</strong>, una herramienta de analítica web <strong>sin cookies</strong> y respetuosa con la privacidad. Umami no instala cookies ni almacena información en tu dispositivo, y recopila únicamente datos <strong>agregados y anónimos</strong> (páginas visitadas, número de visitas, tipo de dispositivo o país aproximado), sin identificar a usuarios concretos ni rastrearlos entre sitios. Al no usar cookies ni almacenamiento en tu equipo, esta analítica <strong>no requiere banner de consentimiento</strong>.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tratamiento</th>
+              <th>Finalidad</th>
+              <th>Base legitimadora</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Contacto telefónico y por WhatsApp</td>
+              <td>Atender solicitudes de información y organizar el servicio de transporte</td>
+              <td>Consentimiento del interesado y/o aplicación de medidas precontractuales (art. 6.1.a y 6.1.b RGPD)</td>
+            </tr>
+            <tr>
+              <td>Contacto por correo electrónico</td>
+              <td>Responder a consultas y gestionar la relación</td>
+              <td>Consentimiento y/o medidas precontractuales (art. 6.1.a y 6.1.b RGPD)</td>
+            </tr>
+            <tr>
+              <td>Gestión de clientes y facturación</td>
+              <td>Prestación del servicio, facturación y obligaciones legales</td>
+              <td>Ejecución de contrato y obligación legal (art. 6.1.b y 6.1.c RGPD)</td>
+            </tr>
+            <tr>
+              <td>Analítica web sin cookies (Umami)</td>
+              <td>Medir de forma agregada y anónima el uso del sitio para mejorarlo</td>
+              <td>Interés legítimo en mejorar el sitio web (art. 6.1.f RGPD)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Legitimación del tratamiento</h2>
+      <p>La base jurídica para el tratamiento de tus datos depende de la actividad concreta, tal como se recoge en la
+        tabla anterior:</p>
+      <ul>
+        <li><strong>Tu consentimiento</strong>, que prestas al contactarnos voluntariamente (art. 6.1.a RGPD).</li>
+        <li><strong>Nuestro interés legítimo</strong> en conocer de forma agregada y anónima el uso del sitio web para mejorarlo, mediante analítica sin cookies (art. 6.1.f RGPD).</li>
+        <li><strong>La aplicación de medidas precontractuales o la ejecución de un contrato</strong> cuando solicitas o
+          contratas un servicio de transporte (art. 6.1.b RGPD).</li>
+        <li><strong>El cumplimiento de obligaciones legales</strong> en materia contable, fiscal y administrativa (art.
+          6.1.c RGPD).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. ¿Durante cuánto tiempo conservamos tus datos?</h2>
+      <p>Conservaremos tus datos durante el tiempo necesario para atender tu solicitud y, en caso de contratación,
+        mientras se mantenga la relación. Una vez finalizada, los datos se conservarán debidamente bloqueados durante los
+        plazos de prescripción de las obligaciones legales (por ejemplo, los plazos previstos en la normativa fiscal y
+        mercantil). La analítica web que utilizamos (Umami) trata únicamente datos agregados y anónimos, sin cookies, que no permiten identificarte.</p>
+    </section>
+
+    <section>
+      <h2>5. ¿A quién comunicamos tus datos?</h2>
+      <p>Con carácter general, no cedemos tus datos a terceros, salvo obligación legal. No obstante, pueden tener acceso a
+        tus datos los siguientes destinatarios o encargados del tratamiento:</p>
+      <ul>
+        <li><strong>WhatsApp Ireland Limited / Meta Platforms</strong>, si decides comunicarte con nosotros por WhatsApp,
+          como prestador de dicho servicio de mensajería.</li>
+        <li><strong>Umami Software, Inc.</strong>, proveedor de la herramienta de analítica web sin cookies, que trata únicamente datos agregados y anónimos.</li>
+        <li><strong>Hostinger International Ltd.</strong>, proveedor de alojamiento web (hosting), que actúa como encargado del tratamiento; sus servidores pueden registrar datos técnicos como la dirección IP en los registros de actividad, junto con otros proveedores tecnológicos o de gestión administrativa.</li>
+        <li>Administraciones públicas, cuando exista una obligación legal.</li>
+      </ul>
+      <p>Algunos de estos proveedores pueden realizar <strong>transferencias internacionales de datos</strong> fuera del
+        Espacio Económico Europeo. En tales casos, dichas transferencias se amparan en las garantías adecuadas previstas
+        por el RGPD, tales como decisiones de adecuación o cláusulas contractuales tipo aprobadas por la Comisión Europea.</p>
+    </section>
+
+    <section>
+      <h2>6. ¿Cuáles son tus derechos?</h2>
+      <p>Cualquier persona tiene derecho a obtener confirmación sobre si estamos tratando datos personales que le
+        conciernen. En particular, puedes ejercer los siguientes derechos:</p>
+      <ul>
+        <li><strong>Acceso:</strong> conocer qué datos tuyos tratamos.</li>
+        <li><strong>Rectificación:</strong> solicitar la corrección de datos inexactos.</li>
+        <li><strong>Supresión:</strong> solicitar la eliminación de tus datos ("derecho al olvido").</li>
+        <li><strong>Oposición:</strong> oponerte al tratamiento de tus datos.</li>
+        <li><strong>Limitación:</strong> solicitar la limitación del tratamiento en determinados supuestos.</li>
+        <li><strong>Portabilidad:</strong> recibir tus datos en un formato estructurado y de uso común.</li>
+        <li><strong>Retirada del consentimiento</strong> en cualquier momento, sin que ello afecte a la licitud del
+          tratamiento previo.</li>
+      </ul>
+      <p>Puedes ejercer estos derechos dirigiéndote por escrito a <span>Reyes Foronda Cocera</span>, en el
+        domicilio <span>Avenida del Mediterráneo nº 40, 3.º C, 03725 Teulada (Alicante)</span>, o a través del correo electrónico
+        <span>logisticatransforonda@gmail.com</span>, indicando el derecho que deseas ejercer y acompañando una copia de tu
+        documento de identidad o documento equivalente que acredite tu identidad.</p>
+      <p>Asimismo, si consideras que el tratamiento de tus datos no se ajusta a la normativa, tienes derecho a presentar
+        una reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (AEPD), C/ Jorge Juan, 6, 28001
+        Madrid (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+    </section>
+
+    <section>
+      <h2>7. Seguridad de los datos</h2>
+      <p>TRANSFORONDA ha adoptado las medidas técnicas y organizativas necesarias para garantizar la seguridad de los
+        datos personales y evitar su alteración, pérdida, tratamiento o acceso no autorizado, habida cuenta del estado de
+        la tecnología, la naturaleza de los datos y los riesgos a los que están expuestos.</p>
+    </section>
+
+    <section>
+      <h2>8. Veracidad de los datos</h2>
+      <p>El usuario garantiza que los datos personales facilitados son veraces y se hace responsable de comunicar
+        cualquier modificación de los mismos. El usuario responderá, en cualquier caso, de la veracidad de los datos
+        facilitados, reservándose el responsable el derecho a excluir de los servicios a toda persona que haya facilitado
+        datos falsos, sin perjuicio de las demás acciones que procedan en Derecho.</p>
+    </section>
+
+    <section>
+      <h2>9. Cambios en la política de privacidad</h2>
+      <p>El responsable se reserva el derecho a modificar la presente Política de Privacidad para adaptarla a novedades
+        legislativas o jurisprudenciales, así como a las prácticas del sector. En dichos supuestos, se anunciarán los
+        cambios en esta página con la antelación razonable a su puesta en práctica.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="aviso-legal.html">Aviso Legal</a>
+        <a href="politica-privacidad.html">Política de Privacidad</a>
+        <a href="politica-cookies.html">Política de Cookies</a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TRANSFORONDA. Todos los derechos reservados.</p>
+        <p>La Marina Alta, Alicante | 20 años de confianza</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
